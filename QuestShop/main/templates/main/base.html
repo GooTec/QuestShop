@@ -14,7 +14,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
-  <a class="navbar-brand" href="#"><img src="{% static 'main/assets/logo.png' %}" style="height:100px;"></a>
+  <a class="navbar-brand" href="{% url 'main:index' %}"><img src="{% static 'main/assets/logo.png' %}" style="height:100px;"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -25,16 +25,16 @@
         <a class="nav-link" href="{% url 'main:index' %}">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'main:index' %}">Works</a>
+        <a class="nav-link" href="{% url 'main:work' %}">Works</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'main:index' %}">About Us</a>
+        <a class="nav-link" href="{% url 'main:aboutus' %}">About Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'main:index' %}">People</a>
+        <a class="nav-link" href="{% url 'main:people' %}">People</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'main:index' %}">Contact</a>
+        <a class="nav-link" href="{% url 'main:contact' %}">Contact</a>
       </li>
 
     </ul>
@@ -42,7 +42,9 @@
 </nav>
 
 {% block content %}{% endblock content %}
-
+<footer>
+    <img class="d-block w-100" src="{% static 'main/assets/footer.png' %}" alt="footer">
+</footer>
 
 </body>
 </html>
