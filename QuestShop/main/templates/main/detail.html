@@ -1,0 +1,15 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+{% load static %}
+<img src="{{ work.main_img.url }}" style="width:100%" >
+<h1>{{ work.title }}</h1>
+<p>{{ work.sub_title }}</p>
+<p>{{ work.content }}</p>
+
+<a href="{% url 'main:work' %}"><p>목록으로 돌아가기</p</a>
+    
+    
+    
+
+{% endblock content %}

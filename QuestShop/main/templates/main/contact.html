@@ -2,4 +2,11 @@
 
 {% block content %}
 {% load static %}
+
+<form action="{% url 'main:contact' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+</form>
+
 {% endblock content %}
